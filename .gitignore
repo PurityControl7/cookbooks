@@ -1,0 +1,19 @@
+# Ignore all files except specific types
+*
+
+# Allow directories
+!*/
+
+# Allow specific file types
+!*.txt     # Text files
+!*.bat     # Batch scripts
+!*.sh      # Bash scripts
+!*.ps1     # PowerShell scripts
+!*.md      # Markdown files
+
+# Ignore backup files created by text editors
+*~
+
+# Ignore system-specific or environment-specific files
+.DS_Store    # macOS system file
+Thumbs.db    # Windows thumbnail cache
