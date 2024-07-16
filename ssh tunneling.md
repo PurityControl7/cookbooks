@@ -1,5 +1,5 @@
 
-# SSL tunneling
+# SSH tunneling
 
 It is required that the SSH server starts at boot time, so add one line to the /etc/rc.local file:
 
