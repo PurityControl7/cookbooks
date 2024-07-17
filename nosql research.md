@@ -316,3 +316,4 @@ Sorting results based on a field and limiting the number of returned documents:
 ```
 db.collection_name.find().sort({ key: 1 }).limit(10);
 ```
+:)
