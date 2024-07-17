@@ -1,7 +1,7 @@
 # cookbooks
 Cybersecurity cookbooks: unleashing mayhem through trial and error.
 
-This workspace contains various small scripts, techniques, experiments and educational tidbits that I find particularly useful (mostly by studying books and other materials). The main goal of this repository is to document and track my learning journey in the field of cybersecurity, as well as to share information with others who might be interested in something like this.
+This workspace contains various small scripts, techniques, experiments and educational tidbits that I find particularly interesting or useful (mostly by studying books and other materials). The main goal of this repository is to document and track my learning journey in the field of cybersecurity, as well as to share information with others who might be interested in something like this.
 
 Contact: ophis7700 [at] yandex.com
 
