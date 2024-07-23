@@ -4,7 +4,7 @@ In our previous cookbook on Active Directory, we demonstrated how to use Respond
 
 Our next stage involves using a PowerShell framework called Empire. Empire is a collection of scripts that automates reconnaissance and escalation processes. The plan is to execute an Empire script on the compromised computer using wmiexec. This script will connect back to the attack server, giving us interactive access to a collection of modules that we can execute on the compromised computer.
 
-On the welcome screen of Responder, navigate to the listeners’ menu (Command Listeners). To view the details of the default listener, use the info command. This command provides information about the currently configured listener.
+On the welcome screen of Empire, navigate to the listeners’ menu (Command Listeners). To view the details of the default listener, use the info command. This command provides information about the currently configured listener.
 
 Here are some additional common commands you might find useful:
 
