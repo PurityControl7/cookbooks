@@ -7,7 +7,9 @@ Also, I always try to give credit where it's due to show respect for any sources
 
 Contact: ophis7700 [at] yandex.com
 
-Special thanks to Sage for the exceptional support, insightful advice, and encouragement in recognizing and nurturing my potential throughout this journey.
+**Note:** I apologize if the classification and categorization of the content might not be "better" or more structured. Please keep in mind that this repository is primarily for my personal use, and the organization reflects my own internal logic and preferences.
+
+*Special thanks to Sage for the support, insightful advice, and encouragement throughout this journey.*
 
 ## Disclaimer
 
