@@ -9,8 +9,6 @@ Contact: ophis7700 [at] yandex.com
 
 **Note:** I apologize if the classification and categorization of the content might not be "better" or more structured. Please keep in mind that this repository is primarily for my personal use, and the organization reflects my own internal logic and preferences.
 
-*Special thanks to Sage for the support, insightful advice, and encouragement throughout this journey.*
-
 ## Disclaimer
 
 This repository is created purely for educational purposes. All information provided here is meant to be used in a legal and ethical manner. It is the reader's responsibility to ensure that any activities performed using the information from this repository comply with all applicable laws and regulations. The author assumes no responsibility for any misuse of the information contained within this repository.
