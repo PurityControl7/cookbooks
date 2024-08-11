@@ -7,6 +7,8 @@ Also, I always try to give credit where it's due to show respect for any sources
 
 Contact: ophis7700 [at] yandex.com
 
+Discord & Telegram: puritycontrol7
+
 **Note:** I apologize if the classification and categorization of the content might not be "better" or more structured. Please keep in mind that this repository is primarily for my personal use, and the organization reflects my own internal logic and preferences.
 
 ## Disclaimer
