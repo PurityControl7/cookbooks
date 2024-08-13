@@ -20,9 +20,7 @@ Steps for Efficient Web Application Scanning with Burp Suite:
 
 Once you've run tools like Nessus or Nexpose to identify common vulnerabilities, it's time to dig deeper into the web application using Burp Suite. The following steps will guide you through configuring and using Burp Suite effectively:
 
-Configure Your Network Proxy
-
-- Enable Burp Suite
+- Enable Burp Suite / Configure Proxy
 
 - Spider Through the Application
 
@@ -34,7 +32,7 @@ Configure Your Network Proxy
 
 Burp Suite operates by intercepting and analyzing web traffic between your browser and the web application. This allows you to modify requests, even bypassing client-side protections. To start, launch Burp Suite on your Windows or Kali system and ensure your proxy is enabled and listening on port 8080. Navigate to the Proxy tab, then to Options, and confirm that Burp is running. If you change the default port, remember to update your browser's configuration accordingly.
 
-Note: *A screenshot under the Proxy - Options tab would typically show the Proxy Listeners settings, where a checkbox should be ticked to enable it. The Interface tab would display *:8080, indicating that Burp Suite is listening on all interfaces on port 8080. Additionally, the "Intercept requests based on the following rules" option is likely enabled by default. This option includes a condition to exclude specific file types like GIF, JPG, PNG, CSS, JS, and ICO from interception, optimizing the focus on more relevant traffic.*
+Note: *A screenshot under the Proxy - Options tab would typically show the Proxy Listeners settings, where a checkbox should be ticked to enable it. The Interface tab would display ```*:8080```, indicating that Burp Suite is listening on all interfaces on port 8080. Additionally, the "Intercept requests based on the following rules" option is likely enabled by default. This option includes a condition to exclude specific file types like GIF, JPG, PNG, CSS, JS, and ICO from interception, optimizing the focus on more relevant traffic.*
 
 To configure your browser to use the port on which Burp Proxy is listening, I recommend using the FoxyProxy add-on for Firefox. This add-on simplifies switching between multiple proxy configurations. You'll most likely find a fox icon next to the browser's URL bar—click on it, select "Add New Proxy," and then click on the "Proxy Details" tab. Set the Manual Proxy Configuration to 127.0.0.1 (localhost) and the proxy port to 8080. Next, return to the "General" tab, assign a name to your proxy, and save the configuration.
 
@@ -101,8 +99,6 @@ Note: *mini-summary of important steps:*
 - Use the Filter button to customize your view.
 
 - Filter to show only in-scope domains to streamline your analysis.
-
-Certainly! Here’s a polished version of the sub-section along with a brief summarization:
 
 **Discover content:**
 
