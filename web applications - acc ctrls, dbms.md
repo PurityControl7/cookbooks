@@ -623,8 +623,6 @@ The SQL language comprises various verbs that define the nature of a given state
 
 When interacting with a remote application, it is not always immediately clear what type of SQL statement processes user input. However, an educated guess can often be made based on the function of the application. Below, we explore the different types of SQL statements and how they can be exploited.
 
-When interacting with a remote application, it is not always immediately clear what type of SQL statement processes user input. However, an educated guess can often be made based on the function of the application. Below, we explore the different types of SQL statements and how they can be exploited.
-
 #### SELECT Statements:
 
 ```SELECT``` statements are used to retrieve information from a database. They commonly appear in functionalities where data is displayed in response to user input, such as:
@@ -686,7 +684,7 @@ Once you identify the correct number of fields, you can use additional SQL injec
 
 - On Oracle: You can embed a ```SELECT``` subquery within the ```INSERT``` query. This subquery can be used to influence the success or failure of the entire statement, leveraging inference techniques to gather information.
 
-#### Statements:
+#### UPDATE Statements:
 
 ```UPDATE``` statements are used to modify existing rows of data in a table. They’re commonly employed when users change existing data — for instance, updating contact information, resetting passwords, or changing an item quantity in an order.
 
