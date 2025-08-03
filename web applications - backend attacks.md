@@ -1,4 +1,4 @@
-**Note:** This is the fifth installment of my notes and reflections from The Web Application Hacker's Handbook. These reminders are neither exhaustive nor definitive—they're simply a personal tool to help me absorb, understand, and organize new material in a way that works for me.
+**Note:** This is the sixth installment of my notes and reflections from The Web Application Hacker's Handbook. These reminders are neither exhaustive nor definitive—they're simply a personal tool to help me absorb, understand, and organize new material in a way that works for me.
 
 ## Attacking Back-End Components:
 
@@ -262,7 +262,7 @@ print "</pre>";
 print end_html;
 ```
 
-- ```</pre>```: Closes the <pre> block from earlier.
+- ```</pre>```: Closes the ```<pre>``` block from earlier.
 
 - ```end_html```: Ends the HTML document, closing the ```<html>``` tag and finalizing the response.
 
