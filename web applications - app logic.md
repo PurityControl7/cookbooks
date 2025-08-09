@@ -918,7 +918,7 @@ This is a hot mess. But let’s dissect it:
 
 - ```%3E``` = ```>```
 
-- ```So ```%3Cscript%3E``` = ```<script>```
+- So ```%3Cscript%3E``` = ```<script>```
 
 But the attacker is *breaking this up* across different encodings and tags. Rewritten (deobfuscated):
 
