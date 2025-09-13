@@ -1388,7 +1388,7 @@ If you hit this kind of wall, your next move is to probe the filter:
 
 1. Isolate the trigger. Start removing parts of your input until it’s accepted.
 
-2. Once you find the triggering pattern (like ```<script>), try different payloads using:
+2. Once you find the triggering pattern (like ```<script>```), try different payloads using:
 
 - HTML obfuscation (```<scr<script>ipt>```)
 
