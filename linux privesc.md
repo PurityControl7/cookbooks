@@ -194,7 +194,17 @@ find /var/log -name "*.log" -type f 2>/dev/null | head -20
 
 ```
 hash-identifier
+
+# With hashcat modes (more reliable than hash-identifier)
 hashid "c99175974b6e192936d97224638a34f8" -m
+
+# For John the Ripper formats
+hashid "c99175974b6e192936d97224638a34f8" -j
+
+# Or show both Hashcat and John modes
+hashid -m -j "c99175974b6e192936d97224638a34f8"
+
+# See desired hashcat modes
 hashcat --help | grep -i "md5"
 hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
 ```
