@@ -190,6 +190,15 @@ find / -name "*.sql" -type f 2>/dev/null
 find /var/log -name "*.log" -type f 2>/dev/null | head -20
 ```
 
+## Hash Identification & Cracking:
+
+```
+hash-identifier
+hashid "c99175974b6e192936d97224638a34f8" -m
+hashcat --help | grep -i "md5"
+hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
+```
+
 ## Persistence & Lateral Movement:
 
 ```
