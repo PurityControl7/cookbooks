@@ -394,7 +394,7 @@ for /f "usebackq tokens=1" %%i in ("IDs.txt") do (
 
 - ```curl -i``` prints headers; pipe into ```findstr /B``` to match the HTTP status line at the start.
 
-- findstr``` patterns include both ```HTTP/1.0``` and ```HTTP/1.1``` to be robust. This approach is simple and useful for Windows hosts where Bash/Cygwin is not available.
+- ```findstr``` patterns include both ```HTTP/1.0``` and ```HTTP/1.1``` to be robust. This approach is simple and useful for Windows hosts where Bash/Cygwin is not available.
 
 *Practical tips:*
 
