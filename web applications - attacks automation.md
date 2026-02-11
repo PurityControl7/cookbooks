@@ -3063,7 +3063,7 @@ When automating identifier enumeration, hits are usually revealed through *obser
 
 - **Response body content,** such as specific strings, error messages, or page elements
 
-- **Response headers,** especially ```Location, ```Set-Cookie```, or caching headers
+- **Response headers,** especially ```Location ```, ```Set-Cookie```, or caching headers
 
 - **Timing differences,** which can occasionally betray backend logic or additional processing
 
